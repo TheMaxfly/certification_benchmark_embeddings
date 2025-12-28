@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+
+# Env files
+.env
+.env.*
+
+# Local outputs
+bench_out/
+
+# OS
+.DS_Store
+Thumbs.db

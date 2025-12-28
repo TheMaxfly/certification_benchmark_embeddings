@@ -1,0 +1,7 @@
+numpy
+pandas
+tqdm
+faiss-cpu
+psycopg
+sentence-transformers
+python-dotenv
