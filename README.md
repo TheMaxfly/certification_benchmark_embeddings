@@ -69,6 +69,21 @@ Les metriques sont ecrites dans `bench.metrics`:
 - `mrr`
 - Pour `Bench_only.py`, les metriques sont prefixees par `entity_` (ex: `entity_recall@8`).
 
+## Benchmark LLM (3 modeles)
+Ce benchmark evalue 3 modeles LLM pour la recommandation manga :
+- `phi3.5:3.8b-mini-instruct-q4_K_M` (Phi 3.5 mini)
+- `ministral-3:3b-instruct-2512-q4_K_M` (Ministral 3B v0.3)
+- `mistral:7b-instruct-v0.3-q4_K_M`
+
+Criteres evalues :
+- Reactivite: latence (mean/median/p95)
+- Precision: `entity_hit@K` et `entity_recall@K`
+- Anti hallucination: validite des citations (`citation_validity`)
+- Style de la reponse: respect du format + francais (`format_ok`, `fr_ok`)
+
+
+Les sorties JSONL sont ecrites dans `bench_out/llm_results_v6.jsonl` (ou `bench_out/llm_results_v7.jsonl` selon le script).
+
 ## Exemples de requetes metiers (benchmark)
 - Humour / school / leger (Takagi): "Je cherche un manga dans le meme esprit que \"Quand Takagi me taquine\" : college, taquineries, humour leger, pas de violence."
 - Romance / comedie (Kaguya): "Je veux une romance comique avec jeu psychologique entre deux lyceens, comme \"Kaguya-sama: Love Is War\"."
